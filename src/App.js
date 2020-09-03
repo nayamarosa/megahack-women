@@ -1,3 +1,4 @@
+// chat bot
 import React from 'react';
 import Chatbot from 'react-chatbot-kit';
 import './App.css';
