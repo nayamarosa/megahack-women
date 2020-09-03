@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+import Home from '../Home';
+
+const App = () => {
   return (
-    <div className="App">
-      
+    <div>
+      <Home />
     </div>
   );
 }
