@@ -2,8 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Home from './Home';
-import Entradas from './Entradas';
-import Saidas from './Saidas';
+import SellBuy from './SellBuy';
 import Bot from './Bot';
 
 const Routes = () => (
@@ -13,11 +12,11 @@ const Routes = () => (
     </Route>
 
     <Route path="/minhas-entradas">
-      <Entradas />
+      <SellBuy />
     </Route>
 
     <Route path="/minhas-saidas">
-      <Saidas />
+      <SellBuy />
     </Route>
 
     <Route path="/fale-com-a-dina">
