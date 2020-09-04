@@ -1,0 +1,28 @@
+.btn {
+  border: none;
+}
+
+.btn__primary {
+  padding: 8px 30px;
+  display: block;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn__primary--rose {
+  margin: 32px auto 0;
+  background-color: #E09C9E;
+}
+
+.btn__primary--green {
+  margin: 20px auto 0;
+  color: #FFFFFF;
+  background-color: #788C50;
+}
+
+.btn__primary--orange {
+  margin: 20px auto 0;
+  color: #FFFFFF;
+  background-color: #C85F3C;
+}
