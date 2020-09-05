@@ -1,0 +1,38 @@
+.header {
+  height: 60px;
+  border-bottom: 2px solid #E09C9E;
+}
+
+.header i {
+  font-size: 20px;
+}
+
+.header__group {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header__nav {
+  position: absolute;
+  top: 0;
+}
+
+.header__nav--closed {
+  display: none;
+}
+
+.header__nav--open {
+  display: block;
+}
+
+.header__logo {
+  width: 95px;
+}
+
+.header__logo img {
+  width: 100%;
+  display: block;
+}
