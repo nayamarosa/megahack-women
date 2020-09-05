@@ -20,12 +20,12 @@ const Menu = () => {
             text="Minhas saídas"
           />
           <MenuOption 
-            href="/"
+            href="/unavaliable"
             icon="fas fa-cash-register"
             text="Meu fluxo de caixa"
           />
           <MenuOption 
-            href="/"
+            href="/unavaliable"
             icon="fas fa-store"
             text="Meu plano de negócios"
           />

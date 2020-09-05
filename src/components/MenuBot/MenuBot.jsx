@@ -1,6 +1,6 @@
 import React from 'react';
 
-import botImage from '../../assets/maiara-bot.jpg';
+import botImage from '../../assets/maiara-bot.png';
 
 const MenuBot = (props) => {
   return (
