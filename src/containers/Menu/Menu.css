@@ -55,15 +55,14 @@
   margin: 20px 0 8px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: #E09C9E;
+  overflow: hidden;
   border-radius: 50%;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-.menu__home-bot-icon {
-  margin-bottom: 4px;
-  font-size: 48px;
-  color: #FFFFFF;
+.menu__home-bot img {
+  height: 160%;
+  display: block;
 }
 
 .menu__home-bot span {

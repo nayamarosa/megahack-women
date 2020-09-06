@@ -4,7 +4,7 @@ import './Menu.css';
 import MenuOption from '../../components/MenuOption';
 import MenuBot from '../../components/MenuBot';
 
-const Menu = () => {
+const HamburgerMenu = () => {
   return (
     <main className="container menu__home">
       <nav className="menu__home-nav">
@@ -36,4 +36,4 @@ const Menu = () => {
   )
 }
 
-export default Menu;
+export default HamburgerMenu;

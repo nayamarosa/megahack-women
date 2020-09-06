@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import SellBuy from './SellBuy';
 import Bot from './Bot';
+import Unavaliable from './Unavaliable';
 
 const Routes = () => (
   <Switch>
@@ -21,6 +22,10 @@ const Routes = () => (
 
     <Route path="/fale-com-a-dina">
       <Bot />
+    </Route>
+
+    <Route path="/unavaliable">
+      <Unavaliable />
     </Route>
   </Switch>
 );
