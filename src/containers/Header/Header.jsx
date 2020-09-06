@@ -19,7 +19,10 @@ const Header = () => {
   const path = window.location.pathname;
 
   return (
-    <header className="header">
+    <>
+    {
+      path !== "/login"
+      ? <header className="header">
       <div className="header__group">
         {
           path !== "/"
@@ -53,6 +56,10 @@ const Header = () => {
         </a>
       </div>
     </header>
+    : false
+  }
+  </>
+    
   )
 }
 

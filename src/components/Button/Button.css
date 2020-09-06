@@ -26,3 +26,11 @@
   color: #FFFFFF;
   background-color: #C85F3C;
 }
+
+.btn__login {
+  margin: 20px 0 0;
+  color: #313131;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #E09C9E;
+}

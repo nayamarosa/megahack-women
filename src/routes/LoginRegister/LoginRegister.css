@@ -1,0 +1,42 @@
+.login {
+  height: 100vh;
+  background-color: #313131;
+}
+
+.login__logo {
+  width: 70%;
+  margin: 0 auto 60px;
+  padding: 42px 0 0;
+}
+
+.login__logo img {
+  width: 100%;
+  display: block;
+}
+
+.login__nav {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.login__nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login__nav li {
+  padding: 0 24px 4px;
+  color: #E09C9E;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.login__nav--active {
+  border-bottom: 2px solid #E09C9E;
+}
+
+.login section {
+  width: 60%;
+  margin: 20px auto 0;
+}
