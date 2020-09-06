@@ -6,10 +6,8 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 
 import firebase from '../../firebaseConfig';
-import withFirebaseAuth from 'react-with-firebase-auth';
-
-const firebaseAppAuth = firebase.auth();
-const database = firebase.firestore();
+import "firebase/auth";
+import "firebase/firestore";
 
 const LoginRegister = () => { 
   const [active, setActive] = useState('');
@@ -26,23 +24,12 @@ const LoginRegister = () => {
       active.classList.remove("login__nav--active");
     }
   }
-  
-  const getUser = async(id) => {
-    const doc = await database.collection("users").doc(id).get();
-    const user = doc.data();
-    console.log(user)
-    return user;
-  }
-  
-  
+
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
   const [registerName, setRegisterName] = useState('');
   const [registerEmail, setRegisterEmail] = useState('');
   const [registerPassword, setRegisterPassword] = useState('');
-
-  const [login, setLogin] = useState({loginEmail, loginPassword});
-  const [register, setRegister] = useState({registerName, registerEmail, registerPassword});
 
   const handleChange = (e, id) => {
     let inputValue = e.target.value;
@@ -64,47 +51,49 @@ const LoginRegister = () => {
     }
   }
 
-  const handleClick = (e, id) => {
+  const handleClickLogin = (e) => {
     e.preventDefault();
-
-    if (id === "login") {
-      return setLogin({loginEmail, loginPassword});
-    }
-    if(id === "register") {
-      return setRegister({registerName, registerEmail, registerPassword});
-    }
-  }
-
-
-  const createUser = () => {
-    login.createUserWithEmailAndPassword(registerEmail, registerPassword)
-    .then(resp => {
-      const id = resp.user.uid;
-      database.collection("users").doc(id).set({
-        name: registerName,
-        email: registerEmail,
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(loginEmail, loginPassword)
+      .then((user) => {
+        console.log(user.user.uid);
+        firebase
+          .firestore()
+          .collection("user")
+          .doc(user.user.uid)
+          .get()
+          .then(() => {
+            window.location.href = "/"
+          });
       });
-      // sessionStorage.setItem('user', id);
-      // sessionStorage.setItem('name', this.state.name);
-      // sessionStorage.setItem('type', this.state.type);
-    })
-    .then(() => {
-      window.location = '/';
-    })
   }
-  
-  const signIn = (obj) => {
-    obj.signInWithEmailAndPassword(loginEmail, loginPassword)
-    .then(() => {
-      const id = firebaseAppAuth.currentUser.uid;
-      getUser(id)
-      // .then((data) => {
-      //   sessionStorage.setItem('user', id);
-      //   sessionStorage.setItem('name', data.name);
-      //   sessionStorage.setItem('type', data.type);
-      //   window.location = '/';
-      // })
-    })
+
+  const handleClickRegister = (e) => {
+    e.preventDefault();
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(registerEmail, registerPassword)
+      .then(() => {
+        const userId = firebase.auth().currentUser.uid;
+        firebase
+          .firestore()
+          .collection("user")
+          .doc(userId)
+          .set({
+            id_user: userId,
+            name: registerName,
+            email: registerEmail,
+          })
+          .then(
+            firebase
+              .auth()
+              .currentUser.updateProfile({
+                name: registerName,
+              })
+              .then(alert("Cadastro efetuado, volte e faça o login."))
+          );
+      });
   }
 
   return (
@@ -146,7 +135,7 @@ const LoginRegister = () => {
           <Button 
             text="Entrar"
             className="btn__primary btn__login"
-            onClick={(e) => handleClick(e, "login")}
+            onClick={(e) => handleClickLogin(e)}
           />
         </form>
       </section>
@@ -177,7 +166,7 @@ const LoginRegister = () => {
           <Button 
             text="Cadastrar"
             className="btn__primary btn__login"
-            onClick={(e) => handleClick(e, "register")}
+            onClick={(e) => handleClickRegister(e)}
           />
         </form>
       </section>
@@ -185,4 +174,4 @@ const LoginRegister = () => {
   )
 }
 
-export default withFirebaseAuth({firebaseAppAuth,})(LoginRegister);
+export default LoginRegister;
