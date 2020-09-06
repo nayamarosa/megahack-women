@@ -5,6 +5,7 @@ import Home from './Home';
 import SellBuy from './SellBuy';
 import Unavaliable from './Unavaliable';
 import LoginRegister from './LoginRegister';
+import CashFlow from './CashFlow/CashFlow';
 
 const Routes = () => (
   <Switch>
@@ -22,6 +23,10 @@ const Routes = () => (
 
     <Route path="/minhas-saidas">
       <SellBuy />
+    </Route>
+
+    <Route path="/meu-fluxo-de-caixa">
+      <CashFlow />
     </Route>
 
     <Route path="/unavaliable">
