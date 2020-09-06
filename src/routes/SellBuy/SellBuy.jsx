@@ -20,6 +20,12 @@ const SellBuy = () => {
 
   const path = window.location.pathname;
   
+  const handleClick = (e) => {
+    e.preventDefault();
+    let path = window.location.href = "/unavaliable"
+    return path;
+  }
+  
   return (
     <>
   {
@@ -32,10 +38,12 @@ const SellBuy = () => {
         <Button 
           className="btn__primary btn__primary--rose"
           text="Cadastrar novo produto/serviço"
+          onClick={(e) => handleClick(e)}
         />
         <Button 
           className="btn__primary btn__primary--green"
           text="Nova entrada"
+          onClick={(e) => handleClick(e)}
         />
       </main>
     : path === "/minhas-saidas" && list.length !== 0
@@ -47,10 +55,12 @@ const SellBuy = () => {
           <Button 
             className="btn__primary btn__primary--rose"
             text="Cadastrar novo produto/serviço"
+            onClick={(e) => handleClick(e)}
           />
           <Button 
             className="btn__primary btn__primary--orange"
             text="Nova saída"
+            onClick={(e) => handleClick(e)}
           />
         </main>
       : <Loading/>
