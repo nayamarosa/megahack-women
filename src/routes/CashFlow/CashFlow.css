@@ -1,0 +1,42 @@
+.chart {
+  padding-top: 26px;
+}
+
+.chart h2 {
+  margin: 0 auto 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.chart__legend {
+  width: 70%;
+  margin: 24px auto 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.chart__legend div p {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.chart__legend--entries p:before {
+  margin-right: 4px;
+  content: '';
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-color: #788C50;
+  border-radius: 4px;
+}
+
+.chart__legend--outs p:before {
+  margin-right: 4px;
+  content: '';
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-color: #C85F3C;
+  border-radius: 4px;
+}
