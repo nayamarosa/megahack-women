@@ -35,8 +35,8 @@ const Header = () => {
                 <ul>
                   <li><a href="/minhas-entradas">Minhas entradas</a></li>
                   <li><a href="/minhas-saidas">Minhas saídas</a></li>
-                  <li>Meu fluxo de caixa</li>
-                  <li>Meu plano de negócios</li>
+                  <li><a href="/meu-fluxo-de-caixa">Meu fluxo de caixa</a></li>
+                  <li><a href="/unavaliable">Meu modelo de negócio</a></li>
                 </ul>
               </nav>
             </div>

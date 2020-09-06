@@ -24,6 +24,7 @@
   top: 0;
   left: 0;
   background-color: #FFFFFF;
+  z-index: 1;
 }
 
 .header__nav nav {
@@ -46,10 +47,6 @@
 
 .header__nav--open {
   display: block;
-}
-
-.header__menu-hamburger {
-
 }
 
 .header__logo {

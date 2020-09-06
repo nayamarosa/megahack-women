@@ -20,14 +20,14 @@ const Menu = () => {
             text="Minhas saídas"
           />
           <MenuOption 
-            href="/unavaliable"
+            href="/meu-fluxo-de-caixa"
             icon="fas fa-cash-register"
             text="Meu fluxo de caixa"
           />
           <MenuOption 
             href="/unavaliable"
             icon="fas fa-store"
-            text="Meu plano de negócios"
+            text="Meu modelo de negócio"
           />
         </ul>
       </nav>
