@@ -31,7 +31,7 @@ const Menu = () => {
           />
         </ul>
       </nav>
-      <MenuBot href="/fale-com-a-dina"/>
+      <MenuBot href="/fale-com-a-maiara"/>
     </main>
   )
 }

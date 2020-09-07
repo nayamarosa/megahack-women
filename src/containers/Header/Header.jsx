@@ -39,7 +39,7 @@ const Header = () => {
                   <li><a href="/meu-fluxo-de-caixa">Meu fluxo de caixa</a></li>
                   <li><a href="/unavaliable">Meu modelo de negócio</a></li>
                   <li className="header__menu-bot">
-                    <a href="/unavaliable">
+                    <a href="/fale-com-a-maiara">
                       Fale com a Maiara
                       <div>
                         <img src={botImage} alt="Fale com a Maiara" />
