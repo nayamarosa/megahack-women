@@ -79,7 +79,7 @@
   margin: 15% auto;
   padding: 20px;
   position: absolute;
-  top: 48%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #313131;
@@ -112,4 +112,35 @@
 .modal-btn {
   display: flex;
   justify-content: space-between;
+}
+
+@media (min-width: 1024px){
+  .login__detail {
+    width: 20%;
+  }
+
+  .login__logo {
+    width: 20%
+  }
+
+  .login__nav {
+    width: 30%;
+  }
+
+  .login__nav ul {
+    justify-content: space-evenly;
+  }
+
+  .login__nav li a p:hover {
+    color: #e4bcbe;
+  }
+
+  .login section {
+    width: 30%
+  }
+
+  .modal-content {
+    width: 30%;
+    top: 25%;
+  }
 }

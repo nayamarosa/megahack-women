@@ -1,5 +1,6 @@
 .btn {
   border: none;
+  cursor: pointer;
 }
 
 .btn__primary {
@@ -13,18 +14,33 @@
 .btn__primary--rose {
   margin: 32px auto 0;
   background-color: #E09C9E;
+  border: 2px solid #E09C9E;
+}
+
+.btn__primary--rose:hover, .btn__login:hover {
+  background-color: #e4bcbe;
 }
 
 .btn__primary--green {
   margin: 20px auto 0;
   color: #FFFFFF;
   background-color: #788C50;
+  border: 2px solid #788C50;
+}
+
+.btn__primary--green:hover {
+  background-color: #8f9c74;
 }
 
 .btn__primary--orange {
   margin: 20px auto 0;
   color: #FFFFFF;
   background-color: #C85F3C;
+  border: 2px solid #C85F3C;
+}
+
+.btn__primary--orange:hover {
+  background-color: #d17f64;
 }
 
 .btn__login {
@@ -43,4 +59,8 @@
   font-weight: 600;
   border: 2px solid #E09C9E;
   background-color: transparent;
+}
+
+.btn__cancel:hover {
+  background-color: #616060;
 }

@@ -47,8 +47,7 @@ const LoginRegister = () => {
     }
   }
 
-  const handleClickLogin = (e) => {
-    e.preventDefault();
+  const handleClickLogin = () => {
     firebase
       .auth()
       .signInWithEmailAndPassword(loginEmail, loginPassword)
@@ -76,8 +75,7 @@ const LoginRegister = () => {
     return document.querySelector('.modal').style.display = "none";
   }
 
-  const handleClickRegister = (e) => {
-    e.preventDefault();
+  const handleClickRegister = () => {
     firebase
       .auth()
       .createUserWithEmailAndPassword(registerEmail, registerPassword)
@@ -135,6 +133,7 @@ const LoginRegister = () => {
               label="E-mail"
               type="email" id="login-email" 
               placeholder="seuemail@provedor.com.br" 
+              required={true}
               onChange={(e) => handleChange(e, "loginEmail")}
             />
             <Input 
@@ -142,12 +141,14 @@ const LoginRegister = () => {
               label="Senha"
               type="password" id="login-epasswordmail" 
               placeholder="Sua senha(mínimo 6 caracteres)" 
+              required={true}
               onChange={(e) => handleChange(e, "loginPassword")}
             />
             <Button 
               text="Entrar"
               className="btn__primary btn__login"
-              onClick={(e) => handleClickLogin(e)}
+              type="submit"
+              onClick={(e) => handleClickLogin()}
             />
           </form>
         </section>
@@ -158,6 +159,7 @@ const LoginRegister = () => {
               label="Nome"
               type="text" id="login-name" 
               placeholder="Nome completo" 
+              required={true}
               onChange={(e) => handleChange(e, "registerName")}
             />
             <Input 
@@ -165,6 +167,7 @@ const LoginRegister = () => {
               label="E-mail"
               type="email" id="register-email" 
               placeholder="seuemail@provedor.com.br" 
+              required={true}
               onChange={(e) => handleChange(e, "registerEmail")}
             />
             <Input 
@@ -172,11 +175,13 @@ const LoginRegister = () => {
               label="Senha"
               type="password" id="register-epasswordmail" 
               placeholder="Sua senha(mínimo 6 caracteres)" 
+              required={true}
               onChange={(e) => handleChange(e, "registerPassword")}
             />
             <Button 
               text="Cadastrar"
               className="btn__primary btn__login"
+              type="submit"
               onClick={(e) => handleOpenModal(e)}
             />
           </form>

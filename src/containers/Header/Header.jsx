@@ -39,7 +39,7 @@ const Header = () => {
     {
       path !== "/login"
       ? <header className="header">
-      <div className="header__group">
+      <div className="container-header header__group">
         {
           path !== "/"
           ? <>

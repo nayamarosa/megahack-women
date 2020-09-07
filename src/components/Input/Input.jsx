@@ -10,6 +10,7 @@ const Input = (props) => {
         id={props.id}
         placeholder={props.placeholder}
         onChange={props.onChange}
+        required={props.required}
       />
     </label>
   )
