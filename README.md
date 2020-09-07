@@ -3,7 +3,7 @@ Projeto realizado pelo time Aruanda(grupo 4) do Megahack Women 2020.
 
 ### Link da Aplicação:
 
-## [Iebá](https://www.github.com.br/nayamarosa/ieba)
+## [Iebá](https://ieba-megahack.web.app)
 
 ## Índice
 
@@ -71,6 +71,7 @@ O protótipo da Ibeá, pode ser visualizado no link abaixo:
 
 ### Roadmap
 * Testes de código
+* Acessibilidade
 * Pré cadastro de produtos/serviços
 * Mais opções de múltipla escolha no chatbot para facilitar o cadastro de entradas/saídas
 * Preenchimento direto nas tabelas de dados
