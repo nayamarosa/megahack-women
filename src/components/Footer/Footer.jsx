@@ -5,16 +5,22 @@ const Footer = () => {
   const path = window.location.pathname;
 
   return (
-    <footer className="footer">
-      <div className="container footer__info">
-        <section className="footer__info-contact">
-          <a href="http://bit.ly/ieba-duvidas-megahack">
-            Acesso às pesquisas
-          </a>
-        </section>
-        <p>Time Aruanda - Grupo 4</p>
-      </div>
-    </footer>
+    <>
+    {
+      path !== "/login"
+      ? <footer className="footer">
+          <div className="container footer__info">
+            <section className="footer__info-contact">
+              <a href="http://bit.ly/ieba-duvidas-megahack">
+                Acesso às pesquisas
+              </a>
+            </section>
+            <p>Time Aruanda - Grupo 4</p>
+          </div>
+        </footer>
+      : false
+    }
+    </>
   )
 }
 

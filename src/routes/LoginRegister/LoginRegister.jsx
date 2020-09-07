@@ -66,6 +66,16 @@ const LoginRegister = () => {
       });
   }
 
+  const handleOpenModal = (e) => {
+    e.preventDefault();
+    return document.querySelector('.modal').style.display = "block";
+  }
+
+  const handleCloseModal = (e) => {
+    e.preventDefault();
+    return document.querySelector('.modal').style.display = "none";
+  }
+
   const handleClickRegister = (e) => {
     e.preventDefault();
     firebase
@@ -141,7 +151,7 @@ const LoginRegister = () => {
             />
           </form>
         </section>
-      : <section className={`register__section ${active === 'Login' ? 'login__nav--hidden' : ''}`}>
+      : <><section className={`register__section ${active === 'Login' ? 'login__nav--hidden' : ''}`}>
           <form>
             <Input 
               htmlFor="login-name"
@@ -167,10 +177,30 @@ const LoginRegister = () => {
             <Button 
               text="Cadastrar"
               className="btn__primary btn__login"
-              onClick={(e) => handleClickRegister(e)}
+              onClick={(e) => handleOpenModal(e)}
             />
           </form>
         </section>
+
+        <div id="myModal" className="modal">
+          <div className="modal-content">
+            <i className="fas fa-times" onClick={(e) => handleCloseModal(e)}></i>
+            <h4>Atenção!</h4>
+            <p>Ao clicar em continuar você se declara consciente do uso de seus dados por nós e por terceiros, seguindo as novas normas da <span>LGPD</span>.</p>
+            <div className="modal-btn">
+              <Button 
+                text="Cancelar"
+                className="btn__primary btn__cancel"
+                onClick={(e) => handleCloseModal(e)}
+              />
+              <Button 
+                text="Continuar"
+                className="btn__primary btn__login"
+                onClick={(e) => handleClickRegister(e)}
+              />
+            </div>
+          </div>
+        </div></>
     }
       <img src={detail} alt=""  className="login__detail" />
     </main>
