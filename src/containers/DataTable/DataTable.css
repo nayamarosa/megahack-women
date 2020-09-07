@@ -1,8 +1,5 @@
-.data {
-  padding: 26px 0 32px;
-}
-
 .data h2 {
+  width: 95%;
   margin: 0 auto 20px;
   font-size: 18px;
   font-weight: 500;

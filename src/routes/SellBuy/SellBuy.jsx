@@ -36,8 +36,8 @@ const SellBuy = () => {
     <>
   {
     path === "/minhas-entradas" && list.length !== 0
-    ? <main className="data">
-        <h2 className="container">Minhas entradas</h2>
+    ? <main className="container-table data">
+        <h2>Minhas entradas</h2>
         <table className="data__table" cellSpacing="0" cellPadding="0">
           <DataTable list={ list } />
         </table>
@@ -53,8 +53,8 @@ const SellBuy = () => {
         />
       </main>
     : path === "/minhas-saidas" && list.length !== 0
-      ? <main className="data">
-          <h2 className="container">Minhas saídas</h2>
+      ? <main className="container-table data">
+          <h2>Minhas saídas</h2>
           <table className="data__table" cellSpacing="0" cellPadding="0">
             <DataTable list={ list } />
           </table>

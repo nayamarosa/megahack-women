@@ -1,0 +1,40 @@
+#WACContainer.WACContainer .WACLauncher__ButtonContainer {
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50% !important;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: transparent !important;
+}
+
+#WACContainer.WACContainer button.WACLauncher__Button.WAC__button--base {
+  width: 200px !important;
+  height: 200px !important;
+  background-color: transparent !important;  
+}
+
+#WACContainer.WACContainer button.WACLauncher__Button svg {
+  width: 110% !important;
+  height: 110% !important;
+  background-image: url('../../assets/maiara-bot.png');
+  background-size: cover;
+}
+
+#WACContainer.WACContainer button.WACLauncher__Button svg path {
+  fill: transparent;
+}
+
+.bot__align {
+  text-align: center;
+  font-size: 16px;
+}
+
+.bot__align h2 {
+  color: #E09C9E;
+  font-weight: 600;
+}

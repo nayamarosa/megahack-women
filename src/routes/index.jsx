@@ -3,9 +3,10 @@ import { Route, Switch } from 'react-router-dom';
 
 import Home from './Home';
 import SellBuy from './SellBuy';
+import CashFlow from './CashFlow';
+import Bot from './Bot';
 import Unavaliable from './Unavaliable';
 import LoginRegister from './LoginRegister';
-import CashFlow from './CashFlow/CashFlow';
 
 const Routes = () => (
   <Switch>
@@ -27,6 +28,10 @@ const Routes = () => (
 
     <Route path="/meu-fluxo-de-caixa">
       <CashFlow />
+    </Route>
+
+    <Route path="/fale-com-a-maiara">
+      <Bot />
     </Route>
 
     <Route path="/unavaliable">
