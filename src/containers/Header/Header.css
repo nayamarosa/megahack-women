@@ -58,3 +58,24 @@
   width: 100%;
   display: block;
 }
+
+.header__menu-bot a {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu-bot a div {
+  width: 25px;
+  height: 25px;
+  margin-left: 12px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header__menu-bot img {
+  height: 160%;
+  display: block;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css';
 import logo from '../../assets/ieba-logo.png';
+import botImage from '../../assets/maiara-bot.png';
 
 import firebase from '../../firebaseConfig';
 import "firebase/auth";
@@ -55,6 +56,14 @@ const Header = () => {
                   <li><a href="/minhas-saidas">Minhas saídas</a></li>
                   <li><a href="/meu-fluxo-de-caixa">Meu fluxo de caixa</a></li>
                   <li><a href="/unavaliable">Meu modelo de negócio</a></li>
+                  <li className="header__menu-bot">
+                    <a href="/unavaliable">
+                      Fale com a Maiara
+                      <div>
+                        <img src={botImage} alt="Fale com a Maiara" />
+                      </div>
+                    </a>
+                  </li>
                 </ul>
               </nav>
             </div>
