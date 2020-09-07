@@ -6,14 +6,11 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer__info">
         <section className="footer__info-contact">
-          <a href="/">
-            Dúvidas
-          </a>
-          <a href="/">
-            Contato
+          <a href="http://bit.ly/ieba-duvidas-megahack">
+            Acesso às pesquisas
           </a>
         </section>
-        <p>Grupo 4</p>
+        <p>Time Aruanda - Grupo 4</p>
       </div>
     </footer>
   )
