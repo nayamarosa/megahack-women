@@ -1,68 +1,80 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Iebá - Projeto para Megahack Women
+Projeto realizado pelo time Aruanda(grupo 4) do Megahack Women 2020.
 
-## Available Scripts
+### Link da Aplicação:
 
-In the project directory, you can run:
+## [Iebá](https://www.github.com.br/nayamarosa/ieba)
 
-### `npm start`
+## Índice
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* [Definição do produto](#definição-do-produto)
+* [Persona](#persona)
+* [Organização/Planejamento](#organização/planejamento)
+* [Como utilizar](#como-utilizar-em-desenvolvimento)
+* [Principais Tecnologias](#principais-tecnologias)
+* [Protótipo](#protótipo)
+* [Definição de pronto](#definição-de-pronto)
+* [Roadmap](#roadmap)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Definição do produto
+A pandemia se instalou e, com ela, a insegurança financeira de milhares de empreendedoras. Como equilibrar o negócio em crise, as atividades domésticas e o cuidado com os filhos que, neste momento, estão o dia todo em casa? A situação fica ainda mais difícil quando se trata de mulheres que, além de empreender, são mães solo.
 
-### `npm test`
+Essas mulheres estão tendo que reinventar seus negócios com uma disponibilidade de tempo ainda menor que antes.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A Iebá fornece a base necessária para que essa mulher empreendedora caminhe rumo a aquisição de crédito para poder começar ou expandir seu negócio. Com o auxílio da Maiara e via chatbot, a usuária passa a ter clareza sobre o fluxo de entradas e saídas de seu empreendimento, além de se familiarizar com seu Modelo de Negócios.
 
-### `npm run build`
+## Persona
+![Persona](https://github.com/nayamarosa/megahack-women/blob/master/src/assets/persona.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### A Iebá encurta a caminhada da Andreia até a aquisição do crédito que ela precisa para seguir firme na hamburgueria. Com o auxílio da Maiara e via chatbot, ela passa a ter clareza sobre o fluxo de entradas e saídas de dinheiro de seu empreendimento; em paralelo, tem a oportunidade de aprender sobre e se familiarizar com seu Modelo de Negócio, que servirá de base para a criação do seu Plano de Negócios.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Organização/Planejamento
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ * Trello;
+ * Reuniões Diárias
 
-### `npm run eject`
+## Como Utilizar em Desenvolvimento
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  #### install no terminal
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  ```` 
+    yarn install
+  ````
+  ou
+  ````
+    npm install
+  ````
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Principais Tecnologias
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* React
+* IBM Watson
 
-## Learn More
+### Definição de pronto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Mobile first
+* Registro de conta com nome, e-mail e senha;
+* Login com e-mail e senha;
+* Chatbot para inserir:
+  * as transações de compra, com a data, valor e quantidade;
+  * as transações de venda, com a data, valor e quantidade;
+* Visualização gráfica da quantidade em reais das entradas (vendas) e saídas (compras) realizadas.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Protótipo
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+O protótipo da Ibeá, pode ser visualizado no link abaixo:
 
-### Analyzing the Bundle Size
+[Protótipo da aplicação](http://bit.ly/ieba-megahack)
+![protótipo](https://github.com/nayamarosa/megahack-women/blob/master/src/assets/prototipo.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Roadmap
+* Testes de código
+* Pré cadastro de produtos/serviços
+* Mais opções de múltipla escolha no chatbot para facilitar o cadastro de entradas/saídas
+* Preenchimento direto nas tabelas de dados
+* Edição de dados do perfil
+* Implementação de coleta de dados para gerar Plano de Negócios completo
+* Consumo de dado para criação de SCORE próprio
+* Gamificação visando a educação financeira

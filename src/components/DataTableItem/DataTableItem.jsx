@@ -13,9 +13,9 @@ const DataTableItem = ({ item }) => {
             <tr key={`${index}-${name}`} className="data__table-item">
               <td>{sale.saleDate}</td>
               <td>{name}</td>
-              <td>{price.sale}</td>
+              <td>R$ {price.sale},00</td>
               <td>{sale.saleQuantity}</td>
-              <td>{sale.saleTotal}</td>
+              <td>R$ {sale.saleTotal},00</td>
             </tr>
           )
         }
@@ -26,9 +26,9 @@ const DataTableItem = ({ item }) => {
           <tr key={`${index}-${name}`} className="data__table-item">
             <td>{buy.buyDate}</td>
             <td>{name}</td>
-            <td>{price.purchase}</td>
+            <td>R$ {price.purchase},00</td>
             <td>{buy.buyQuantity}</td>
-            <td>{buy.buyTotal}</td>
+            <td>R$ {buy.buyTotal},00</td>
           </tr>
         )
       }
