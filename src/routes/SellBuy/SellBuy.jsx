@@ -5,6 +5,12 @@ import DataTable from '../../containers/DataTable';
 import Loading from '../../components/Loading';
 
 const SellBuy = () => {
+  if(sessionStorage.getItem('user')){
+    sessionStorage.getItem('id');       
+  } else{
+    window.location = '/login';
+  }
+  
   const [list, setList] = useState([]);
   
   useEffect(() => {

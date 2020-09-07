@@ -1,6 +1,15 @@
 .login {
   height: 100vh;
+  position: relative;
   background-color: #313131;
+}
+
+.login__detail {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
 }
 
 .login__logo {
@@ -25,7 +34,11 @@
   justify-content: space-between;
 }
 
-.login__nav li {
+.login__nav li a {
+  display: block;
+}
+
+.login__nav li a p {
   padding: 0 24px 4px;
   color: #E09C9E;
   font-size: 16px;
@@ -39,4 +52,8 @@
 .login section {
   width: 60%;
   margin: 20px auto 0;
+}
+
+.login__nav--hidden {
+  display: none;
 }
