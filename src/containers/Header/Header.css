@@ -4,6 +4,7 @@
 }
 
 .header i {
+  color: #313131;
   font-size: 24px;
   display: block;
 }
@@ -11,9 +12,6 @@
 .header__group {
   padding: 8px 12px 14px;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   position: relative;
 }
 
@@ -77,4 +75,10 @@
 .header__menu-bot img {
   height: 160%;
   display: block;
+}
+
+@media (min-width: 1024px){
+  .header__nav {
+    width: 30%;
+  }
 }

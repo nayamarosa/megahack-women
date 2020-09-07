@@ -6,9 +6,14 @@ import SellBuy from './SellBuy';
 import CashFlow from './CashFlow';
 import Bot from './Bot';
 import Unavaliable from './Unavaliable';
+import LoginRegister from './LoginRegister';
 
 const Routes = () => (
   <Switch>
+    <Route exact path="/login">
+      <LoginRegister />
+    </Route>
+
     <Route exact path="/">
       <Home />
     </Route>

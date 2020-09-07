@@ -3,6 +3,10 @@ import './Header.css';
 import logo from '../../assets/ieba-logo.png';
 import botImage from '../../assets/maiara-bot.png';
 
+import firebase from '../../firebaseConfig';
+import "firebase/auth";
+import "firebase/firestore";
+
 const Header = () => {
 
   const handleOpenMenu = (state) => {
@@ -17,11 +21,25 @@ const Header = () => {
     }
   }
 
+  const handleClickLogout = (e) => {
+    e.preventDefault();
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        sessionStorage.clear();
+        window.location.href = "/login";
+      })
+  }
+
   const path = window.location.pathname;
 
   return (
-    <header className="header">
-      <div className="header__group">
+    <>
+    {
+      path !== "/login"
+      ? <header className="header">
+      <div className="container-header header__group">
         {
           path !== "/"
           ? <>
@@ -57,11 +75,15 @@ const Header = () => {
               <img src={logo} alt="Logo Iebá" />
             </h1>
           </a>
-        <a href="/">
-          <i className="fas fa-user-circle"></i>
+        <a href="/" onClick={(e) => handleClickLogout(e)}>
+          <i className="fas fa-user-times"></i>
         </a>
       </div>
     </header>
+    : false
+  }
+  </>
+    
   )
 }
 
