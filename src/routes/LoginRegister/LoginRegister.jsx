@@ -47,7 +47,8 @@ const LoginRegister = () => {
     }
   }
 
-  const handleClickLogin = () => {
+  const handleClickLogin = (e) => {
+    e.preventDefault();
     firebase
       .auth()
       .signInWithEmailAndPassword(loginEmail, loginPassword)
@@ -75,7 +76,8 @@ const LoginRegister = () => {
     return document.querySelector('.modal').style.display = "none";
   }
 
-  const handleClickRegister = () => {
+  const handleClickRegister = (e) => {
+    e.preventDefault();
     firebase
       .auth()
       .createUserWithEmailAndPassword(registerEmail, registerPassword)
@@ -148,7 +150,7 @@ const LoginRegister = () => {
               text="Entrar"
               className="btn__primary btn__login"
               type="submit"
-              onClick={(e) => handleClickLogin()}
+              onClick={(e) => handleClickLogin(e)}
             />
           </form>
         </section>

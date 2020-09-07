@@ -24,3 +24,13 @@ yarn-error.log*
 
 .vscode
 src/firebaseConfig.js
+.firebaserc
+database.rules.json
+firebase.json
+firestore.indexes.json
+firestore.rules
+storage.rules
+.firebase/hosting.cHVibGlj.cache
+.firebase/hosting.YnVpbGQ.cache
+
+.firebase
